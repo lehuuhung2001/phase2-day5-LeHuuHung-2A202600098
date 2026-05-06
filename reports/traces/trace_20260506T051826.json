@@ -1,0 +1,104 @@
+{
+  "timestamp": "20260506T051826",
+  "query": "Explain GraphRAG",
+  "iterations": 4,
+  "route_history": [
+    "researcher",
+    "analyst",
+    "writer",
+    "done"
+  ],
+  "errors": [],
+  "trace_events": [
+    {
+      "name": "supervisor.route",
+      "payload": {
+        "route": "researcher",
+        "iteration": 1
+      }
+    },
+    {
+      "name": "researcher.complete",
+      "payload": {
+        "num_sources": 5,
+        "tokens_out": 411
+      }
+    },
+    {
+      "name": "supervisor.route",
+      "payload": {
+        "route": "analyst",
+        "iteration": 2
+      }
+    },
+    {
+      "name": "analyst.complete",
+      "payload": {
+        "tokens_out": 649
+      }
+    },
+    {
+      "name": "supervisor.route",
+      "payload": {
+        "route": "writer",
+        "iteration": 3
+      }
+    },
+    {
+      "name": "writer.complete",
+      "payload": {
+        "tokens_out": 671
+      }
+    },
+    {
+      "name": "supervisor.route",
+      "payload": {
+        "route": "done",
+        "iteration": 4
+      }
+    },
+    {
+      "name": "workflow.complete",
+      "payload": {
+        "iterations": 4,
+        "route_history": [
+          "researcher",
+          "analyst",
+          "writer",
+          "done"
+        ],
+        "errors": []
+      }
+    }
+  ],
+  "agent_results": [
+    {
+      "agent": "researcher",
+      "metadata": {
+        "input_tokens": 402,
+        "output_tokens": 411,
+        "cost_usd": 0.0003069,
+        "num_sources": 5
+      },
+      "content_preview": "### Research Notes on Explain GraphRAG\n\n**Overview of Explain GraphRAG**  \nExplain GraphRAG (Graph-based Retrieval-Augmented Generation) is an advanced framework designed to enhance the interpretabili"
+    },
+    {
+      "agent": "analyst",
+      "metadata": {
+        "input_tokens": 507,
+        "output_tokens": 649,
+        "cost_usd": 0.00046544999999999996
+      },
+      "content_preview": "### Structured Analysis of Explain GraphRAG\n\n1. **Key Claims**\n   - **Claim 1**: Explain GraphRAG enhances interpretability and performance of generative models by integrating graph structures.  \n    "
+    },
+    {
+      "agent": "writer",
+      "metadata": {
+        "input_tokens": 1280,
+        "output_tokens": 671,
+        "cost_usd": 0.0005945999999999999
+      },
+      "content_preview": "### Understanding Explain GraphRAG: An Overview\n\nExplain GraphRAG (Graph-based Retrieval-Augmented Generation) is an innovative framework that enhances the interpretability and performance of generati"
+    }
+  ]
+}
